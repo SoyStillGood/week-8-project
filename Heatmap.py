@@ -15,7 +15,7 @@ os.makedirs('plots/seaborn_heatmap', exist_ok=True)
 sns.set()
 
 fig, ax = plt.subplots(figsize=(14,14))
-sns.heatmap(wine_df.corr(), annot=True, ax=ax, cmap='prism', fmt='.2f', annot_kws={"size": 15}, linewidths=.05)
+sns.heatmap(wine_df.corr(), annot=True, ax=ax, cmap='cubehelix', fmt='.2f', annot_kws={"size": 15}, linewidths=.05)
 ax.set_xticklabels(wine_df.columns, rotation=45)
 ax.set_yticklabels(wine_df.columns, rotation=45)
 fig.subplots_adjust(top=.75)
