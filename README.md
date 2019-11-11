@@ -1,5 +1,7 @@
 # week-8-project
 
+*Please ignore the loading.py file, this was for testing only*
+
 This ReadMe file will be my report on the figures generated inside this Repository. 
 
 Having initially chosen the breast cancer dataset, I've decided to change to the Wine dataset so as to use the common dataset betwene myself and my in-class partner Olga. 
