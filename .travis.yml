@@ -7,12 +7,12 @@ before_install:
   - sudo apt-get -y install libxml2-dev
   
 install:
-  - pip install --user pandas
-  - pip install --user matplotlib
-  - pip install --user os
-  - pip install --user seaborn
-  - pip install --user numpy
-  - pip install --user sklearn
+  - pip install pandas
+  - pip install matplotlib
+  - pip install os
+  - pip install seaborn
+  - pip install numpy
+  - pip install sklearn
 
 script:
   - python3 Heatmap.py
