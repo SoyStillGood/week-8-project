@@ -1,27 +1,22 @@
 import argparse
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import seaborn as sns
+from sklearn.datasets import load_wine
 
-# import scikit-learn as skt
+
+wine = load_wine()
+wine_df = pd.DataFrame(wine.data, columns=wine.feature_names)
 
 
-parser = argparse.ArgumentParser()
-parser.add_argument("-f", "--file", dest="file", help="input data file")
-
-args = parser.parse_args()
-file = args.file
-
-wine = pd.read_csv(filepath_or_buffer=file, sep=',', header=0)
-wine_df = pd.DataFrame(data=wine)
-#print(wine_df.columns)
+print(wine_df.columns)
 
 sns.set()
 
 #wine_sns = sns.load_dataset("wine_df")
 
-g = sns.lmplot(x=wine_df[" Alcohol"], y=wine_df[" Malic Acid"], hue=wine_df["Instance"], data=wine_df)
+g = sns.lmplot(x=wine_df["alcohol"], y=wine_df["malic_acid"], hue=wine_df["hue"], data=wine_df)
 
 g.set_axis_labels("Alcohol", "Malic Acid")
 
